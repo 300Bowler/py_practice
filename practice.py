@@ -16,8 +16,17 @@ print(r)
 fName = ' '
 mName = ' '
 lName = ' '
+jrSr = ' '
 
 name = input('Enter the full name: ')
+
+try:
+    commaIndex = name.index(',')
+    jrSr = name[commaIndex + 2:]
+    name = name[:commaIndex]
+except:
+    print('Not a junior or Senior, etc.')
+    
 
 split_name = name.split(' ')
 
